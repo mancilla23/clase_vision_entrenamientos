@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definir la función Softplus
+def softplus(x):
+    return np.log(1 + np.exp(x))
+
+# Crear valores de x en el intervalo [-10, 10]
+x = np.linspace(-10, 10, 1000)
+
+# Calcular valores de la función
+y = softplus(x)
+
+# Crear la gráfica
+plt.figure()
+
+plt.plot(x, y, label="Softplus")
+
+plt.title("Softplus Activation Function")
+plt.xlabel("x")
+plt.ylabel("Softplus(x)")
+
+plt.grid(True)
+plt.legend()
+
+plt.show()
